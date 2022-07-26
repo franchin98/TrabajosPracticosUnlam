@@ -8,6 +8,9 @@ public class Sudoku {
     }
 
     public void rellenarCelda(int fila, int col, byte valor) {
+	// El usuario ingresara números a partir del 1. 
+	// Decrementamos el valor para fila y columnas. 
+	// El decremento permite obtener valores válidos.
 	tablero[--fila][--col] = valor;
     }
     
@@ -26,7 +29,8 @@ public class Sudoku {
     public boolean validar(int fila, int col, byte valor) {
 	boolean repiteEnFila = false, repiteEnColumna = false, repiteEnGrupo = false;
 	fila--;
-	col--;
+	
+	col--; //columnas
 	
 	switch(fila) {
 	case 0:
